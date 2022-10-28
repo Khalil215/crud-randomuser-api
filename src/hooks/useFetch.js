@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import ErrorBoundary from "../components/ErrorBoundary"
 export default function useFetch(url) {
   const [users, setUsers] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -13,7 +12,8 @@ export default function useFetch(url) {
         setUsers(data.results)
         setIsLoading(false)
       } catch (error) {
-       throw new Error(error)
+setIsLoading(false)
+       throw new Error('error')
       }
 
     }
