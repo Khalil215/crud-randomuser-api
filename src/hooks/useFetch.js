@@ -12,8 +12,7 @@ export default function useFetch(url) {
         setUsers(data.results)
         setIsLoading(false)
       } catch (error) {
-setIsLoading(false)
-       throw new Error('error')
+setUsers({})
       }
 
     }
