@@ -1,11 +1,11 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 
 export default function Navbar() {
   return (
     <Nav>
-      <Head>the LOREM COMMUNITY</Head>
+      <Link to={'/'}><Head>the LOREM COMMUNITY</Head></Link>
       <Links><NavLink to='/' end className={({ isActive }) => (isActive ? 'button' : 'link')}>Home</NavLink>
         <NavLink to='/services' className={({ isActive }) => (isActive ? 'button' : 'link')}>Services</NavLink>
         <NavLink to='/community' className={({ isActive }) => (isActive ? 'button' : 'link')}>Community</NavLink>
